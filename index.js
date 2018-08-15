@@ -18,6 +18,30 @@ function myFunction() {
 
     var r;
 
+    if (recommended == true){
+
+        for (var i = 0; i < size; i++) {
+
+            while (1) {
+
+                r = Math.floor((Math.random() * (127)));
+
+                if ((r >= 32 && r <= 47) || (r >= 58 && r <= 64) || (r >= 91 && r <= 96) || (r >= 123 && r <= 126) || (r >= 48 && r <= 57) || (r >= 65 && r >= 90) || (r >= 97 && r <= 122)) {
+
+                    output[i] = String.fromCharCode(r);
+
+                    console.log(output[i]);
+
+                    break;
+
+                }
+
+            }
+
+        }
+
+    }
+
     if (smallLetters == true && numbers == false && specialCharacters == false && capitalLetters == false && recommended == false) {
 
         for (var i = 0; i < size; i++) {
@@ -173,6 +197,171 @@ function myFunction() {
             }
 
         }
+
+    }else if(smallLetters == false && numbers == true && specialCharacters == true && capitalLetters == false && recommended == false){
+
+
+        for (var i = 0; i < size; i++) {
+
+            while (1) {
+
+                r = Math.floor((Math.random() * (127)));
+
+                if ((r >= 32 && r <= 47) || (r >= 58 && r <= 64) || (r >= 91 && r <= 96) || (r >= 123 && r <= 126) || (r >= 48 && r <= 57) ) {
+
+                    output[i] = String.fromCharCode(r);
+
+                    console.log(output[i]);
+
+                    break;
+
+                }
+
+            }
+
+        }
+
+    }else if(smallLetters == false && numbers == true && specialCharacters == false && capitalLetters == true && recommended == false){
+
+
+        for (var i = 0; i < size; i++) {
+
+            while (1) {
+
+                r = Math.floor((Math.random() * (127)));
+
+                if ( (r >= 65 && r <= 90) || (r >= 48 && r <= 57) ) {
+
+                    output[i] = String.fromCharCode(r);
+
+                    console.log(output[i]);
+
+                    break;
+
+                }
+
+            }
+
+        }
+
+    }else if(smallLetters == false && numbers == false && specialCharacters == true && capitalLetters == true && recommended == false){
+
+
+        for (var i = 0; i < size; i++) {
+
+            while (1) {
+
+                r = Math.floor((Math.random() * (127)));
+
+                if ( (r >= 65 && r <= 90) || (r >= 32 && r <= 47) || (r >= 58 && r <= 64) || (r >= 91 && r <= 96) || (r >= 123 && r <= 126) ) {
+
+                    output[i] = String.fromCharCode(r);
+
+                    console.log(output[i]);
+
+                    break;
+
+                }
+
+            }
+
+        }
+
+    }else if(smallLetters == true && numbers == true && specialCharacters == true && capitalLetters == false && recommended == false){
+
+
+        for (var i = 0; i < size; i++) {
+
+            while (1) {
+
+                r = Math.floor((Math.random() * (127)));
+
+                if ( (r >= 48 && r <= 57) || (r >= 97 && r <= 122) || (r >= 32 && r <= 47) || (r >= 58 && r <= 64) || (r >= 91 && r <= 96) || (r >= 123 && r <= 126) ) {
+
+                    output[i] = String.fromCharCode(r);
+
+                    console.log(output[i]);
+
+                    break;
+
+                }
+
+            }
+
+        }
+
+    }else if(smallLetters == true && numbers == false && specialCharacters == true && capitalLetters == true && recommended == false){
+
+
+        for (var i = 0; i < size; i++) {
+
+            while (1) {
+
+                r = Math.floor((Math.random() * (127)));
+
+                if ( (r >= 65 && r <= 90) || (r >= 97 && r <= 122) || (r >= 32 && r <= 47) || (r >= 58 && r <= 64) || (r >= 91 && r <= 96) || (r >= 123 && r <= 126) ) {
+
+                    output[i] = String.fromCharCode(r);
+
+                    console.log(output[i]);
+
+                    break;
+
+                }
+
+            }
+
+        }
+
+    }else if(smallLetters == false && numbers == true && specialCharacters == true && capitalLetters == true && recommended == false){
+
+
+        for (var i = 0; i < size; i++) {
+
+            while (1) {
+
+                r = Math.floor((Math.random() * (127)));
+
+                if ( (r >= 65 && r <= 90) || (r >= 48 && r <= 57) || (r >= 32 && r <= 47) || (r >= 58 && r <= 64) || (r >= 91 && r <= 96) || (r >= 123 && r <= 126) ) {
+
+                    output[i] = String.fromCharCode(r);
+
+                    console.log(output[i]);
+
+                    break;
+
+                }
+
+            }
+
+        }
+
+    }else if(smallLetters == true && numbers == true && specialCharacters == false && capitalLetters == true && recommended == false){
+
+
+        for (var i = 0; i < size; i++) {
+
+            while (1) {
+
+                r = Math.floor((Math.random() * (127)));
+
+                if ( (r >= 65 && r <= 90) || (r >= 48 && r <= 57) || (r >= 97 && r <= 122)) {
+
+                    output[i] = String.fromCharCode(r);
+
+                    console.log(output[i]);
+
+                    break;
+
+                }
+
+            }
+
+        }
+
+    }else if(smallLetters == false && numbers == false && specialCharacters == false && capitalLetters == false && recommended == false){
+
+        alert("Please Select at least one check box");
 
     }
 
