@@ -20,25 +20,25 @@ function myFunction() {
 
     if (recommended == true){
 
-        for (var i = 0; i < size; i++) {
+        smallLetters = false;
 
-            while (1) {
+        capitalLetters = false;
 
-                r = Math.floor((Math.random() * (127)));
+        numbers = false;
 
-                if ((r >= 32 && r <= 47) || (r >= 58 && r <= 64) || (r >= 91 && r <= 96) || (r >= 123 && r <= 126) || (r >= 48 && r <= 57) || (r >= 65 && r >= 90) || (r >= 97 && r <= 122)) {
+        specialCharacters = false;
 
-                    output[i] = String.fromCharCode(r);
+    }else if (smallLetters == true && numbers == true && specialCharacters == true && capitalLetters == true && recommended == false){
 
-                    console.log(output[i]);
+        smallLetters = false;
 
-                    break;
+        numbers = false;
 
-                }
+        specialCharacters = false;
 
-            }
+        capitalLetters = false;
 
-        }
+        recommended = true;
 
     }
 
