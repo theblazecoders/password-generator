@@ -3,7 +3,7 @@ document.getElementById("generate").addEventListener("click", myFunction, true);
 function myFunction() {
 
     var size = parseInt(document.getElementById("size").value);
-
+    
     var smallLetters = document.getElementById("smallLetters1").checked;
 
     var capitalLetters = document.getElementById("capitalLetters1").checked;
