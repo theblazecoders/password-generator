@@ -46,7 +46,7 @@ function genPass() {
   })
 
   do {
-    const charRange = minMaxes[Math.floor(getRandomgetRandom(minMaxes.length))];
+    const charRange = minMaxes[Math.floor(getRandom(minMaxes.length))];
 
     const char = getRandom(charRange[0], charRange[1]);
 
