@@ -50,7 +50,7 @@ function genPass() {
     const char = getRandom(minMax[0], minMax[1]);
     
     const inRange = minMaxes.filter((minmax) => {return (char >= minmax[0] && char <= minmax[1])}).length > 0;
-    if (inRange) output.push(String.fromCharCode(char));
+    if (inRange) output.push(String.fromCharCode(Math.floor(char)));
   }
   while (output.length < size)
     
