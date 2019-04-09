@@ -28,9 +28,31 @@ function genPass() {
   const getRandom = (max, min=0) => {
     return (Math.floor(Math.random() * (max - min)) + min);
   }
+  
+  const getMinMaxFromArr = (arr) => {
+    return [
+      arr.reduce((acc, new)) => {
+        return (acc[0] <= new[0]) ? acc[0] : new[0];
+      }),
+      arr.reduce((acc, new)) => {
+        return (acc[1] >= new[1]) ? acc[1] : new[1];
+      })
+    ];
+  }
+  
+  const minMaxes = [];
+  checkBoxes.forEach(check => {
+    minMaxes.forEach(charMap[check]);
+  })
 
-  checkBoxes.forEach(checkbox => {
-    const charMinMax = charMap[checkbox];
-    // Algorithm for generation
-  });
+  do {
+    const minMax = getMinMaxFromArr(minMaxes);
+    const char = getRandom(minMax[0], minMax[1]);
+    
+    const inRange = minMaxes.filter((minmax) => {return (char >= minmax[0] && char <= minmax[1])}).length > 0;
+    if (inRange) output.push(String.fromCharCode(char));
+  }
+  while (output.length < size)
+    
+  document.getElementById("output_text").innerText = "Your Password is: " + output.join("");
 }
