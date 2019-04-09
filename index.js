@@ -46,11 +46,11 @@ function genPass() {
   })
 
   do {
-    const minMax = getMinMaxFromArr(minMaxes);
-    const char = getRandom(minMax[0], minMax[1]);
-    
-    const inRange = minMaxes.filter((minmax) => {return (char >= minmax[0] && char <= minmax[1])}).length > 0;
-    if (inRange) output.push(String.fromCharCode(Math.floor(char)));
+    const charRange = minMaxes[Math.floor(getRandomgetRandom(minMaxes.length))];
+
+    const char = getRandom(charRange[0], charRange[1]);
+
+    output.push(String.fromCharCode(Math.floor(char)))
   }
   while (output.length < size)
     
