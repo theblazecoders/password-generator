@@ -18,12 +18,9 @@ body {
 }
 
 .output{
-  width: 40%;
   height: 100%;
   padding: 15px;
-  position: absolute;
   top: 20px;
-  float: right;
 }
 
 .output_text{
