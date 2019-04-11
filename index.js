@@ -51,7 +51,7 @@ function genPass() {
   
   const minMaxes = [];
   checkboxes.forEach(check => {
-    minMaxes.forEach(charMap[check]);
+    minMaxes.push(charMap[check]);
   })
 
   do {
