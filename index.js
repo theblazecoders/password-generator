@@ -1,7 +1,7 @@
 document.getElementById("generate").addEventListener("click", genPass, true);
 
 function genPass() {
-  var size = parseInt(document.getElementById("size").value);
+  var size = parseInt($("#size").val());
   
   let checkBoxes = [];
   
