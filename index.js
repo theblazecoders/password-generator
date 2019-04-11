@@ -5,12 +5,18 @@ function genPass() {
   
   let checkBoxes = [];
   
+  if (document.getElementById("recommended").checked) {
+    checkboxes.push('specialCharacters');
+    checkboxes.push('numbers');
+    checkboxes.push('smallLetters');
+    checkboxes.push('capitalLetters');
+  }
+  
   if (document.getElementById("smallLeters").checked) checkboxes.push('smallLetters');
   if (document.getElementById("capitalLetters").checked) checkboxes.push('capitalLetters');
   if (document.getElementById("numbers").checked) checkboxes.push('numbers');
   if (document.getElementById("specialCharacters").checked) checkboxes.push('specialCharacters');
-  if (document.getElementById("recommended").checked) checkboxes.push('recommended');
-
+  
   var output = [];
   
   if (checkBoxes.length < 1) {
@@ -31,10 +37,10 @@ function genPass() {
   
   const getMinMaxFromArr = (arr) => {
     return [
-      arr.reduce((acc, new)) => {
+      arr.reduce((acc, new) => {
         return (acc[0] <= new[0]) ? [acc[0], 0] : [new[0], 0];
       })[0],
-      arr.reduce((acc, new)) => {
+      arr.reduce((acc, new) => {
         return (acc[1] >= new[1]) ? [0, acc[1]] : [0, new[1]];
       })[1]
     ];
