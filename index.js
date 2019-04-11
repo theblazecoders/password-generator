@@ -1,16 +1,18 @@
-document.getElementById("generate").addEventListener("click", genPass, true);
+$("#generate").click(genPass);
+
+$('.checkbox[name="recommended"]').click(() => {
+  $('.checkbox[name!="recommended"]').attr('disabled', $('.checkbox[name="recommended"]').prop('checked') ? 'disabled' : 'false');
+})
 
 function genPass() {
   var size = parseInt($("#size").val());
   
   let checkBoxes = [];
-  
-  if ($('.checkbox[name="recommended"]').prop('checked')) {
-    $('.checkbox[name!="recommended"]').attr('disabled', 'disabled');
-    checkboxes.push('specialcharacters');
-    checkboxes.push('numbers');
-    checkboxes.push('smallletters');
-    checkboxes.push('capitalletters');
+  if ($('.checkbox[name="recommended"]').prop('checked')){
+    checkboxes.push('smallletters')
+    checkboxes.push('capitalletters')
+    checkboxes.push('numbers')
+    checkboxes.push('specialcharacters')
   }
   else {
     $('.checkbox').each(() => {
@@ -61,5 +63,6 @@ function genPass() {
   }
   while (output.length < size)
     
-  document.getElementById("output_text").innerText = "Your Password is: " + output.join("");
+  $("#output_text").text("Your Password is: " + output.join(""));
+  $('.checkbox').prop('checked', 'false');
 }
