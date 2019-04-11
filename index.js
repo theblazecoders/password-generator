@@ -7,7 +7,7 @@ $('.checkbox[name="recommended"]').click(() => {
 function genPass() {
   var size = parseInt($("#size").val());
   
-  let checkBoxes = [];
+  let checkboxes = [];
   if ($('.checkbox[name="recommended"]').prop('checked')){
     checkboxes.push('smallletters')
     checkboxes.push('capitalletters')
@@ -22,7 +22,7 @@ function genPass() {
   
   var output = [];
   
-  if (checkBoxes.length < 1) {
+  if (checkboxes.length < 1) {
     console.log('select at least one checkbox');
     return;
   }
@@ -50,7 +50,7 @@ function genPass() {
   }
   
   const minMaxes = [];
-  checkBoxes.forEach(check => {
+  checkboxes.forEach(check => {
     minMaxes.forEach(charMap[check]);
   })
 
