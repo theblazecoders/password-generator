@@ -6,6 +6,7 @@ function genPass() {
   let checkBoxes = [];
   
   if (document.getElementById("recommended").checked) {
+    document.querySelector('.checkbox[name!="recommended"]);
     checkboxes.push('specialCharacters');
     checkboxes.push('numbers');
     checkboxes.push('smallLetters');
