@@ -5,18 +5,18 @@ function genPass() {
   
   let checkBoxes = [];
   
-  if (document.getElementById("recommended").checked) {
-    document.querySelector('.checkbox[name!="recommended"]);
-    checkboxes.push('specialCharacters');
+  if ($('.checkbox[name="recommended"]').prop('checked')) {
+    $('.checkbox[name!="recommended"]').attr('disabled', 'disabled');
+    checkboxes.push('specialcharacters');
     checkboxes.push('numbers');
-    checkboxes.push('smallLetters');
-    checkboxes.push('capitalLetters');
+    checkboxes.push('smallletters');
+    checkboxes.push('capitalletters');
   }
-  
-  if (document.getElementById("smallLeters").checked) checkboxes.push('smallLetters');
-  if (document.getElementById("capitalLetters").checked) checkboxes.push('capitalLetters');
-  if (document.getElementById("numbers").checked) checkboxes.push('numbers');
-  if (document.getElementById("specialCharacters").checked) checkboxes.push('specialCharacters');
+  else {
+    $('.checkbox').each(() => {
+      if ($(this).prop('checked')) checkboxes.push($(this).attr('name').toLowerCase());
+    })
+  }
   
   var output = [];
   
@@ -27,9 +27,9 @@ function genPass() {
 
   const charMap = {
     smallletters: [97, 122],
-    capitalLetters: [65, 90],
+    capitalletters: [65, 90],
     numbers: [30, 39],
-    specialChars: [42, 46]
+    specialcharacters: [42, 46]
   }
 
   const getRandom = (max, min=0) => {
