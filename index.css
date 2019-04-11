@@ -1,81 +1,32 @@
 body {
-
-    margin: 0;
-
+  margin: 0;
 }
 
 .head {
-
-    width: 100%;
-    height: 10%;
-    font-size: 32.5px;
-    text-align: center;
-    letter-spacing: 5px;
-    word-spacing: 155px;
-    color: black;
-    box-shadow: 10px 10px 5px grey;
-}
-
-.inputFromUser {
-
-    width: 50%;
-    height: 100%;
-    padding: 10px;
-    position: absolute;
-    top: 20px;
-    float: left;
-}
-
-.size {
-
-    font-size: 20px;
-
-}
-
-.sizeinput {
-
-    width: 30%;
-    font-size: 30px;
-
-}
-
-.something{
-
-    margin-right: 40px;
-
-}
-
-.checkbox{
-
-    margin-left: 15px;
-    margin-bottom: 15px;
+  width: 100%;
+  height: 10%;
+  font-size: 32.5px;
+  text-align: center;
+  letter-spacing: 5px;
+  word-spacing: 155px;
+  color: black;
+  box-shadow: 10px 10px 5px grey;
 }
 
 #generate{
-
-    color: black;
-}
-
-#smallLetters,#capitalLetters,#numbers,#specialCharacters,#recommended{
-
-    font-size: 20px;
-    color: black;
-
+  color: black;
 }
 
 .output{
-    width: 40%;
-    height: 100%;
-    padding: 15px;
-    position: absolute;
-    top: 20px;
-    float: right;
-
+  width: 40%;
+  height: 100%;
+  padding: 15px;
+  position: absolute;
+  top: 20px;
+  float: right;
 }
 
 .output_text{
-
-    text-align: center;
-    font-size: 20px;
-
+  text-align: center;
+  font-size: 20px;
 }
