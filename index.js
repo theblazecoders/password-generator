@@ -40,11 +40,11 @@ function genPass() {
   
   const getMinMaxFromArr = (arr) => {
     return [
-      arr.reduce((acc, new) => {
-        return (acc[0] <= new[0]) ? [acc[0], 0] : [new[0], 0];
+      arr.reduce((acc, val) => {
+        return (acc[0] <= val[0]) ? [acc[0], 0] : [val[0], 0];
       })[0],
-      arr.reduce((acc, new) => {
-        return (acc[1] >= new[1]) ? [0, acc[1]] : [0, new[1]];
+      arr.reduce((acc, val) => {
+        return (acc[1] >= val[1]) ? [0, acc[1]] : [0, val[1]];
       })[1]
     ];
   }
