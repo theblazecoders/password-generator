@@ -1,90 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Password Generator</title>
+  <meta charset="UTF-8">
+  <title>Password Generator</title>
 
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="materialize.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="materialize.css">
 
 </head>
 <body>
-<div class="card-panel blue accent-4 head ">
-
-    Password Generator
-
-</div>
-<div class="container">
-    <div class="card inputFromUser blue accent-4 ">
-
-        <div class="row size">
-            <div class="col s12">
-                Enter the size of the password:
-                <div class="input-field inline sizeinput">
-                    <input id="size" type="email" class="validate">
-                </div>
-            </div>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center">Password Generator</a>
+    </div>
+  </nav>
+    
+  <div class="container">
+    <div class="card">
+      <div class="row size">
+        <div class="col s12">
+          <div class="input-field inline">
+            <input id="size" type="number">
+            <label for="size">Password Size</label>
+          </div>
         </div>
-
-        <div class="checkbox">
-
-            <p>
-                <label class="something">
-                    <input id="smallLetters1" type="checkbox" class="filled-in checkbox"/>
-                    <span id="smallLetters">a to z</span>
-                </label>
-            </p>
-
-            <p>
-                <label class="something">
-                    <input id="capitalLetters1" type="checkbox" class="filled-in"/>
-                    <span id="capitalLetters">A to Z</span>
-                </label>
-            </p>
-
-            <p>
-                <label class="something">
-                    <input id="numbers1" type="checkbox" class="filled-in"/>
-                    <span id="numbers">0 to 9</span>
-                </label>
-            </p>
-
-            <p>
-                <label class="something">
-                    <input id="specialCharacters1" type="checkbox" class="filled-in"/>
-                    <span id="specialCharacters">Special Characters</span>
-                </label>
-            </p>
-
-
-            <p>
-                <label class="something">
-                    <input id="recommended1" type="checkbox" class="filled-in" checked="checked"/>
-                    <span id="recommended">Recommended(All Four)</span>
-                </label>
-            </p>
-
-
-            <a class="waves-effect waves-light btn blue accent-4" id="generate">Generate</a>
-
-
-        </div>
-
+      </div>
     </div>
 
+    <div class="card">
+      <p>
+        <label>
+          <input id="smallLetters" type="checkbox" class="filled-in"/>
+          <span>a to z</span>
+        </label>
+      </p>
 
-    <div class="card output blue accent-4">
+      <p>
+        <label>
+          <input id="capitalLetters" type="checkbox" class="filled-in"/>
+          <span>A to Z</span>
+        </label>
+      </p>
 
-        <p class="output_text">Output:</p>
+      <p>
+        <label>
+          <input id="numbers" type="checkbox" class="filled-in"/>
+          <span>0 to 9</span>
+        </label>
+      </p>
 
-        <p class="output_text" id="output_text"></p>
+      <p>
+        <label>
+          <input id="specialCharacters" type="checkbox" class="filled-in"/>
+          <span>Special Characters</span>
+        </label>
+      </p>
 
+      <p>
+        <label class="something">
+          <input id="recommended" type="checkbox" class="filled-in" checked="checked"/>
+          <span>Recommended(All Four)</span>
+        </label>
+      </p>
+       <a class="waves-effect waves-light btn" id="generate">Generate</a>
     </div>
 
-</div>
-<script src="materialize.js"></script>
-<script src="index.js"></script>
-
-
+  </div>
+  <div class="card output">
+    <p class="output_text">Output:</p>
+    <p class="output_text" id="output_text"></p>
+  </div>
+  
+  <script src="materialize.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
