@@ -9,6 +9,7 @@ $('.checkbox[name="recommended"]').click(() => {
 
 function genPass() {
   var size = parseInt($("#size").val());
+  size = isNaN(size) ? 8 : size;
   
   let checkboxes = [];
   if ($('.checkbox[name="recommended"]').prop('checked')){
@@ -26,8 +27,10 @@ function genPass() {
   var output = [];
   
   if (checkboxes.length < 1) {
-    console.log('select at least one checkbox');
-    return;
+    checkboxes.push('smallletters')
+    checkboxes.push('capitalletters')
+    checkboxes.push('numbers')
+    checkboxes.push('specialcharacters')
   }
 
   const charMap = {
@@ -67,5 +70,5 @@ function genPass() {
   while (output.length < size)
     
   $("#output_text").text("Your Password is: " + output.join(""));
-  $('.checkbox').prop('checked', false);
+
 }
