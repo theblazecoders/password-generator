@@ -1,7 +1,7 @@
 $("#generate").click(genPass);
 
 $('.checkbox[name="recommended"]').click(() => {
-  if ($(this).prop('checked'))
+  if ($(this).prop('checked') != 'false')
     $('.checkbox[name!="recommended"]').attr('disabled', true);
   else
     $('.checkbox[name!="recommended"]').attr('disabled', false);
