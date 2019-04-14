@@ -36,7 +36,7 @@ function genPass() {
   const charMap = {
     smallletters: [97, 122],
     capitalletters: [65, 90],
-    numbers: [30, 39],
+    numbers: [48, 57],
     specialcharacters: [42, 46]
   }
 
