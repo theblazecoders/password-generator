@@ -1,7 +1,7 @@
 $("#generate").click(genPass);
 
 $('.checkbox[name="recommended"]').click(() => {
-  if ($(this).prop('checked') != 'false')
+  if ($('.checkbox[name="recommended"]').prop('checked'))
     $('.checkbox[name!="recommended"]').attr('disabled', true);
   else
     $('.checkbox[name!="recommended"]').attr('disabled', false);
@@ -18,8 +18,8 @@ function genPass() {
     checkboxes.push('specialcharacters')
   }
   else {
-    $('.checkbox').each(() => {
-      if ($(this).prop('checked')) checkboxes.push($(this).attr('name').toLowerCase());
+    $('.checkbox').each((i, box) => {
+      if ($(box).prop('checked')) checkboxes.push($(box).attr('name').toLowerCase());
     })
   }
   
