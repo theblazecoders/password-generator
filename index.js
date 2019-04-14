@@ -67,5 +67,5 @@ function genPass() {
   while (output.length < size)
     
   $("#output_text").text("Your Password is: " + output.join(""));
-  $('.checkbox').prop('checked', 'false');
+  $('.checkbox').prop('checked', false);
 }
